@@ -3,23 +3,23 @@ package com.chainsys.book.model;
 import java.time.LocalDate;
 
 public class Book {
-	private int book_id;
+	private int id;
 	private String name;
 	private LocalDate publishDate;
 	
-	public Book(int book_id, String name, LocalDate publishDate) {
+	public Book(int id, String name, LocalDate publishDate) {
 		super();
-		this.book_id= book_id;
+		this.id= id;
 		this.name= name;
 		this.publishDate= publishDate;
 	}
 
 	public int getBook_id() {
-		return book_id;
+		return id;
 	}
 
 	public void setBook_id(int book_id) {
-		this.book_id = book_id;
+		this.id = book_id;
 	}
 
 	public String getName() {
@@ -42,7 +42,7 @@ public class Book {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + book_id;
+		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((publishDate == null) ? 0 : publishDate.hashCode());
 		return result;
@@ -57,7 +57,7 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		if (book_id != other.book_id)
+		if (id != other.id)
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -74,9 +74,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + book_id + ", name=" + name + ", publishDate=" + publishDate + "]";
+		return "Book [id=" + id + ", name=" + name + ", publishDate=" + publishDate + "]";
 	}
-	
-	
 	
 }
